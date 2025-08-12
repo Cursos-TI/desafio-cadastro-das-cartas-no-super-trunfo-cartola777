@@ -17,6 +17,124 @@ int main() {
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+ 
 
-    return 0;
+
+
+
+//carta 1
+
+char estado[60];
+char codigo_da_carta[280];
+char cidade[20];
+int populacao;
+float area_km;
+
+printf("qual o nome da estado ? \n");
+scanf("%59s", estado);
+printf("O estado  e: %s\n" , estado);
+
+printf("qual o codigo da carta \n");
+scanf("%10s", codigo_da_carta);
+printf("O codigo e : %s\n",codigo_da_carta);
+
+printf("qual a cidade \n");
+scanf("  %26s", cidade);
+printf("O cIDADE  e : %s\n",cidade);
+
+printf(" tamanho popululacao  \n");
+scanf("  %d", &populacao);
+printf("A POPULACAO E: %d\n", populacao);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;
 }
