@@ -30,7 +30,7 @@ int pontosturiscos1;
 float pibpercapita;
 float inversodadesidade1;
 float superpoder;
- unsigned int populacao1;
+unsigned long int populacao1;
 
 
 //variaveis da carta2
@@ -44,77 +44,110 @@ int pontoturistico2;
 float pibpercapito2;
 float inversodadesidade2;
 float superpoder2;
- unsigned int populacao2;
+ unsigned long int populacao2;
+
 //entrada de dados carta 01
 
 printf("===CADASTRO DA CARTA 01===\n");
 
 printf("digite se estado (letra de A a h),");
-scanf(" %C", &estado1);
+scanf("%c", &estado1);
 
 printf("degite o codigo da carta 01  (A01):");
-scanf(" %s", codigo1);
+scanf("%s", codigo1);
 
 printf("degite o nome da cidade");
-scanf(" %s",nomecidade1 );
+scanf(" %[^\n]",nomecidade1 );
 getchar();
 
 printf("digite a populacaco");
 scanf(" %lu", &populacao1);
 
 printf("digite area (em km²)");
-scanf(" %f", area1);
+scanf(" %f", &area1);
 
 printf(" digite o pib");
-scanf(" %f", pib1);
+ scanf(" %f", &pib1);
 
 printf("digite os ponto turisticos");
-scanf("%d", pontosturiscos1);
+scanf("%d", &pontosturiscos1);
 
-//calculo densidade populaciona 01
-densidade1 = populacao1/area1 
-
-
-
-
-
-
-
-
-
+//calculo densidade populacionaL 01
+densidade1 = populacao1 / area1; 
+//cauculo o pib pecapita
+pibpercapita =pib1 / (float)populacao1;
+// caculo do inverso da densidade
+inversodadesidade1= 1 / densidade1;
+//calculo do super poder
+superpoder=  (float)populacao1+ area1+ pib1 + (float)pontosturiscos1 +pibpercapita + inversodadesidade1;
+ 
+printf("\n"); //pula linha
 
 //entrada de carta 02
 printf("=== cadastro da carta 02 === \n");
 
 printf("digite se estado (letra de A a h),");
-scanf("%C", estado02);
+scanf("%c", estado02);
 
 printf("degite o codigo da carta 01  (A01):");
 scanf("%s", codigo2);
 
 printf("degite o nome da cidade");
-scanf(" %s",nomecidade2 );
+scanf(" %[^\n] ",nomecidade2 );
 getchar();
 
 printf("digite a populacaco");
 scanf("%lu", &populacao2);
 
 printf("digite area (em km²)");
-scanf("%f", area2);
+scanf("%f", &area2);
 
 printf(" digite o pib");
-scanf("%f", pib2);
+scanf("%f", &pib2);
 
 printf("digite os ponto turisticos");
-scanf("%d", pontoturistico2);
+scanf("%d", &pontoturistico2);
+
+//calculo  densidade populaconal
+densidade2= populacao2 / area2;
+//caulculoo do pib percapito
+pibpercapito2 = pib2 / (float)populacao2;
+//calculo do invrso da desidade
+inversodadesidade2= 1 / densidade2;
+//calculo super poder
+superpoder2=(float)populacao2+area2 + pib2 +(float)pontoturistico2 + pibpercapito2 + inversodadesidade2 ;
+ printf("\n");
+
+//exebicao da  carta 01
+
+printf(" carta:\n ");
+printf("estado1: %s\n ", estado1);
+printf(" codigo 1:\n", codigo1);
+printf(" nome da cidade 1 %s\n" , nomecidade1);
+printf("populacao %lu\n  " , populacao1);
+printf ("area; %2.f\n" , area1);                                                                                           
+printf(" pib: %2.f\n ",pib1 );
+printf(" numero de ponto turistico %d\n",  pontosturiscos1);
+printf("densidade populacional: %2f hab/km²\n ", densidade1);
+printf("PIB per capita :%2.f reais\n", pibpercapita);
+ printf(" super poder % 2.f \n" , superpoder);
+
+printf("\n");
+
+// exebição da carta 02
 
 
-
-
-
-
-
-
+printf(" carta:\n ");
+printf("estado2: %s\n ", estado02);
+printf(" codigo 2:\n", codigo2);
+printf(" nome da cidade 2 %s\n" , nomecidade2);
+printf("populacao2 %lu\n  " , populacao2);
+printf ("area 2; %2.f\n" , area2);                                                                                           
+printf(" pib 2: %2.f\n ",pib2 );
+printf(" numero de ponto turistico 2 %d\n", pontoturistico2);
+printf("densidade populacional2: %2f hab/km²\n ", densidade2);
+printf("PIB per capita2 :%2.f reais\n", pibpercapito2);
+ printf(" super poder q % 2.f \n" , superpoder2);
 
 
 
